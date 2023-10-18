@@ -91,7 +91,7 @@ def main():
     sftp_password = args.sftp_password
 
     # Your code to connect to the SFTP server and perform actions goes here
-    print(f"Connecting to SFTP server {sftp_host}:{sftp_port} with username {sftp_username} and password {sftp_password}")
+    print(f"Connecting to SFTP server {sftp_host}:{sftp_port} with username {sftp_username} and password {sftp_password[4]}")
 
     connection = Connection(sftp_host, sftp_port, sftp_username, sftp_password)
     connection.connect('100MB_original.bin')
