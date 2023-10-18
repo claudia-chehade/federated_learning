@@ -75,15 +75,7 @@ class Connection:
 
 
 def main():
-    import sys
-    raw_args = sys.argv
-
-    password_argument = raw_args[raw_args.index('--sftp-password') + 1]
-    print("Raw Password Argument:", password_argument)
-    
-    for arg in raw_args:
-        print("Raw Argument:", arg)
-
+   
     parser = argparse.ArgumentParser(description="A script to connect to an SFTP server.")
     parser.add_argument('--sftp-host', required=True, type=str, help="SFTP server hostname or IP address.")
     parser.add_argument('--sftp-port', type=int, default=22, help="SFTP server port (default: 22).")
